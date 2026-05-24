@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Detectar si es dispositivo táctil
   const isMobile = window.matchMedia("(pointer: coarse)").matches;
 
-  // --- 1. LÓGICA DEL CURSOR (Solo para PC) ---
   const cursor = document.getElementById('cursor');
   if (isMobile && cursor) {
-    cursor.style.display = 'none'; // Ocultar en móvil
+    cursor.style.display = 'none';
   } else if (cursor) {
     document.addEventListener('mousemove', e => {
       requestAnimationFrame(() => {
@@ -20,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- 2. TYPEWRITER (Recuperado y mejorado) ---
   const text = 'Cómo empezó todo...';
   let i = 0;
   const tw = document.getElementById('typewriter');
@@ -34,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(type, 1200);
   }
 
-  // --- 3. SCROLL REVEAL (Con staggered delay) ---
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
       if (e.isIntersecting) {
@@ -45,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.1 });
 
-  // Asignar delays dinámicos
   const setupObserver = (selector, baseDelay) => {
     document.querySelectorAll(selector).forEach((el, index) => {
       el.dataset.delay = index * baseDelay;
@@ -57,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setupObserver('.lore-entry', 100);
   setupObserver('.click-label, .click-title, .click-text, .click-divider, .click-aside', 120);
 
-  // --- 4. BLOBS DE FONDO (Optimizado) ---
   const createBlobs = () => {
     const blobCoords = [
       { top: '10%', left: '5%', color: 'var(--accent-blue)' },
@@ -68,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
     blobCoords.forEach(coord => {
       const blob = document.createElement('div');
       blob.className = 'bg-blob';
-      // Si es móvil, los hacemos un poco más pequeños para no saturar
       const size = isMobile ? '250px' : '450px';
       Object.assign(blob.style, {
         width: size, height: size,
@@ -83,9 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   createBlobs();
 
-  // --- 5. CHISPAS (Sparkles) ---
   document.addEventListener('click', (e) => {
-    const sparkleCount = isMobile ? 4 : 8; // Menos chispas en móvil
+    const sparkleCount = isMobile ? 4 : 8;
     const colors = ['#3b82f6', '#ec4899', '#e11d48'];
     
     for (let i = 0; i < sparkleCount; i++) {
