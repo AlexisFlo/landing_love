@@ -270,6 +270,7 @@ section { position: relative; z-index: 1; }
   transform: translateY(-5px) scale(1.01);
   border-color: rgba(236,72,153,0.25);
 }
+
 @media (max-width: 640px) {
   .tl-card.expanded {
     grid-template-columns: 1fr;
@@ -278,6 +279,11 @@ section { position: relative; z-index: 1; }
   .tl-card.expanded .tl-photo {
     height: 180px;
     border-radius: 18px 18px 0 0;
+  }
+
+  .tl-card.expanded .tl-event-text {
+    -webkit-line-clamp: unset;
+    overflow: visible;
   }
 }
 
@@ -332,7 +338,7 @@ section { position: relative; z-index: 1; }
   color: var(--ink-light);
   font-style: italic;
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: unset;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
