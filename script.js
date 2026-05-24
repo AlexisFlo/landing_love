@@ -115,9 +115,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.toggleEaster = (btn) => {
     const reveal = btn.nextElementSibling;
+    const card = btn.closest('.tl-card');
     const isOpen = reveal.classList.contains('open');
+
     btn.classList.toggle('open', !isOpen);
     reveal.classList.toggle('open', !isOpen);
+    card.classList.toggle('expanded', !isOpen);
   };
 
   window.handleCTA = () => {
