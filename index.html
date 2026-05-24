@@ -11,22 +11,22 @@
   <link rel="apple-touch-icon" href="assets/icon.png" />
 
   <meta property="og:title" content="Cómo empezó todo..." />
-<meta property="og:description" content="Una historia en curso..." />
-<meta property="og:image" content="assets/usap.png" />
-<meta property="og:type" content="website" />
+  <meta property="og:description" content="Una historia en curso..." />
+  <meta property="og:image" content="assets/usap.png" />
+  <meta property="og:type" content="website" />
 </head>
 <body>
 
-<div id="cursor"></div>
-<div id="toast"></div>
+<div id="cursor" aria-hidden="true"></div>
+<div id="toast" role="alert" aria-live="polite"></div>
 
 <section id="hero">
   <div class="hero-ornament" aria-hidden="true">∞</div>
   <p class="hero-label">Una historia en curso</p>
   <h1 class="hero-title">
-    <span id="typewriter"></span><span id="typewriter-cursor"></span>
+    <span id="typewriter"></span><span id="typewriter-cursor" aria-hidden="true">|</span>
   </h1>
-    <p class="hero-poem">
+  <p class="hero-poem">
     Desde que llegaste todo suena diferente,<br>
     hasta los días grises se sienten más calientes,<br>
     y aunque a veces el mundo venga medio roto,<br>
@@ -38,6 +38,7 @@
   </div>
 </section>
 
+<section id="timeline">
   <div class="tl-spine">
 
     <article class="tl-item">
@@ -45,7 +46,7 @@
       <p class="tl-date">where it all started without anyone knowing</p>
       <div class="tl-card">
         <div class="tl-photo">
-          <img src="assets/Us.png" alt="Nosotros" style="width:100%; height:100%; object-fit:cover; object-position: center 60%;" />
+          <img src="assets/Us.png" alt="Nosotros compartiendo el mismo espacio" style="width:100%; height:100%; object-fit:cover; object-position: center 60%;" />
         </div>
         <div class="tl-body">
           <h3 class="tl-event-title">El azar de los <em>apellidos</em>.</h3>
@@ -67,7 +68,7 @@
       <p class="tl-date">when I could no longer pretend that I didn't</p>
       <div class="tl-card">
         <div class="tl-photo">
-          <img src="assets/english.jpg" alt="Los lirios de la primera cita" style="width:100%; height:100%; object-fit:cover; object-position: center 60%;" />
+          <img src="assets/english.jpg" alt="Salón de clases de Avanzado 1" style="width:100%; height:100%; object-fit:cover; object-position: center 60%;" />
         </div>
         <div class="tl-body">
           <h3 class="tl-event-title">Avanzado 1 y la <em>certeza</em>.</h3>
@@ -89,7 +90,7 @@
       <p class="tl-date">the message that took me too long to send</p>
       <div class="tl-card">
         <div class="tl-photo">
-         <img src="assets/conversacion.jpg" alt="Preguntas" style="width:100%; height:100%; object-fit:cover; object-position: center 60%;" />
+          <img src="assets/conversacion.jpg" alt="Cajita de preguntas en Instagram" style="width:100%; height:100%; object-fit:cover; object-position: center 60%;" />
         </div>
         <div class="tl-body">
           <h3 class="tl-event-title">Una cajita de <em>preguntas</em>.</h3>
@@ -133,7 +134,7 @@
       <p class="tl-date">the day I sent you flowers</p>
       <div class="tl-card">
         <div class="tl-photo">
-          <img src="assets/roses.jpg" alt="Las 20 rosas" style="width:100%; height:100%; object-fit:cover; object-position: center 40%;" />
+          <img src="assets/roses.jpg" alt="Las 20 rosas de sorpresa" style="width:100%; height:100%; object-fit:cover; object-position: center 40%;" />
         </div>
         <div class="tl-body">
           <h3 class="tl-event-title">Las rosas de <em>abril</em>.</h3>
@@ -155,7 +156,7 @@
       <p class="tl-date">the first kiss...</p>
       <div class="tl-card">
         <div class="tl-photo">
-          <img src="assets/tlay.jpg" alt="Los lirios de la primera cita" style="width:100%; height:100%; object-fit:cover; object-position: center 60%;" />
+          <img src="assets/tlay.jpg" alt="Cena en el restaurante oaxaqueño" style="width:100%; height:100%; object-fit:cover; object-position: center 60%;" />
         </div>
         <div class="tl-body">
           <h3 class="tl-event-title">El punto de no <em>retorno</em>.</h3>
@@ -172,10 +173,7 @@
       </div>
     </article>
 
-  </div>
-</section>
-
-<section id="the-click">
+  </div> </section> <section id="the-click">
   <div class="click-bg"></div>
   <div class="click-number" aria-hidden="true">01</div>
   <div class="click-inner">
@@ -193,7 +191,7 @@
 
 <footer>
   <div class="footer-inner">
-    <span class="footer-glyph">♡</span>
+    <span class="footer-glyph" aria-hidden="true">♡</span>
     <p class="footer-message">
       «No tengo el mapa completo de lo que viene.<br>
       Tengo la certeza de que quiero seguir descubriéndolo contigo.»<br>
