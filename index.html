@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cómo empezó todo...</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="toast"></div>
+
+<section id="hero">
+  <div class="hero-ornament" aria-hidden="true">∞</div>
+  <p class="hero-label">Una historia en curso · Sin tanto filtro</p>
+  <h1 class="hero-title">
+    <span id="typewriter"></span><span id="typewriter-cursor"></span>
+  </h1>
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Desliza</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+
+  <div class="tl-spine">
+
+    <article class="tl-item">
+      <div class="tl-dot"></div>
+      <p class="tl-date">where it all started without anyone knowing</p>
+      <div class="tl-card">
+        <div class="tl-photo">
+          <div class="tl-photo-gradient" style="background: linear-gradient(135deg,#1a1a2e,#16213e,#0f3460)"></div>
+          <span class="tl-photo-placeholder">[ foto aquí ]</span>
+        </div>
+        <div class="tl-body">
+          <h3 class="tl-event-title">El azar de los <em>apellidos</em>.</h3>
+          <p class="tl-event-text">No fue una elección consciente, sino el destino jugando con el orden alfabético. Compartir el mismo apellido nos puso en la misma línea de una lista que, sin saberlo, dictaría el resto de mi historia. Recuerdo la extrañeza inicial y ese cruce de miradas donde el nombre de uno invocaba la presencia del otro; fue como si el universo hubiera decidido, de forma casi caprichosa, que era imposible que pasáramos desapercibidos en medio de tanta gente.</p>
+          <div class="tl-easter-wrap">
+            <button class="tl-easter" onclick="toggleEaster(this)">
+              <span class="tl-easter-arrow">›</span> nota
+            </button>
+            <div class="easter-reveal">
+              De todas las aulas y todas las listas, acabamos en la misma. No sé si llamarle casualidad... pero creo que sí sé quién lo organizó.
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tl-item">
+      <div class="tl-dot"></div>
+      <p class="tl-date">when I could no longer pretend that I didn't</p>
+      <div class="tl-card">
+        <div class="tl-photo">
+          <div class="tl-photo-gradient" style="background: linear-gradient(135deg,#2c1810,#6b2d1e,#c8463a)"></div>
+          <span class="tl-photo-placeholder">[ foto aquí ]</span>
+        </div>
+        <div class="tl-body">
+          <h3 class="tl-event-title">Avanzado 2 y la <em>certeza</em>.</h3>
+          <p class="tl-event-text">Nuestros nombres ya nos resultaban familiares, pero nuestras voces seguían siendo ajenas. Sabíamos perfectamente quién era el otro, aunque el silencio fuera nuestra única constante en ese salón. Mientras el curso seguía su ritmo, mi atención se fue quedando contigo de una forma distinta. Fue una marea silenciosa; sin haber cruzado una sola palabra, la certeza me cubrió por completo. Me gustabas, y me gustabas en serio, aunque en ese momento solo fuéramos dos conocidos que se observaban de lejos.</p>
+          <div class="tl-easter-wrap">
+            <button class="tl-easter" onclick="toggleEaster(this)">
+              <span class="tl-easter-arrow">›</span> nota
+            </button>
+            <div class="easter-reveal">
+              Eras una completa extraña y, aun así, ya eras la única persona a la que buscaba con la mirada en cuanto llegaba al salón. Eras mi secreto mejor guardado de ese semestre.
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tl-item">
+      <div class="tl-dot"></div>
+      <p class="tl-date">the message that took me too long to send</p>
+      <div class="tl-card">
+        <div class="tl-photo">
+          <div class="tl-photo-gradient" style="background: linear-gradient(135deg,#1c1c2e,#2d2d44,#3d2b4a)"></div>
+          <span class="tl-photo-placeholder">[ foto aquí ]</span>
+        </div>
+        <div class="tl-body">
+          <h3 class="tl-event-title">Una cajita de <em>preguntas</em>.</h3>
+          <p class="tl-event-text">Llevabamos tiempo cerca, pero faltaba ese "push". Hasta que apareció esa pequeña cajita de preguntas en tu Instagram; fue el pretexto perfecto, la grieta en el muro que necesitaba para romper el silencio de una vez por todas.</p>
+          <div class="tl-easter-wrap">
+            <button class="tl-easter" onclick="toggleEaster(this)">
+              <span class="tl-easter-arrow">›</span> nota
+            </button>
+            <div class="easter-reveal">
+              Fue el momento en que decidí que ya no quería estar cerca por azar, sino porque yo te elegía a ti.
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tl-item">
+      <div class="tl-dot"></div>
+      <p class="tl-date">the first date</p>
+      <div class="tl-card">
+        <div class="tl-photo">
+          <img 
+  src="assets/lirios.jpg" 
+  alt="Los lirios de la primera cita"
+  style="width:100%; height:100%; object-fit:cover; object-position: center 60%;"
+/>
+        </div>
+        <div class="tl-body">
+          <h3 class="tl-event-title">Lirios, metro y <em>paz</em>.</h3>
+          <p class="tl-event-text">Salí del trabajo con una sola dirección y atravesé la ciudad para llegar a ti. Fue la primera vez que llevé flores en el metro, protegiéndolas entre la gente como si fueran de cristal; sentía que todo el esfuerzo valía la pena solo por verte. Fuimos a comer esas alitas de mango que habías mencionado; en nuestra primera cita quería cumplirte hasta el deseo más pequeño para que supieras que te escucho desde el primer momento.<br><br>Algo que se me quedó grabado fue verte manejar. Al verte, el nerviosismo se transformó en paz. El tiempo se detuvo de verdad cuando nos quedamos en el carro, envueltos en la música que disfrutas. Mientras el atardecer se rendía ante la noche, compartimos mucho más que el espacio; entre pláticas y silencios, mientras la luz caía, supe con total certeza que ese era el inicio de algo real.</p>
+          <div class="tl-easter-wrap">
+            <button class="tl-easter" onclick="toggleEaster(this)">
+              <span class="tl-easter-arrow">›</span> nota
+            </button>
+            <div class="easter-reveal">
+              Hay atardeceres que se quedan grabados no por el cielo, sino por quién tienes al lado mientras la luz se apaga. Esa noche, el mundo pudo haberse detenido y yo no me hubiera dado cuenta.
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tl-item">
+      <div class="tl-dot"></div>
+      <p class="tl-date">the day I sent you flowers</p>
+      <div class="tl-card">
+        <div class="tl-photo">
+          <img 
+  src="assets/roses.jpg" 
+  alt="Las 20 rosas"
+  style="width:100%; height:100%; object-fit:cover; object-position: center 40%;"
+/>
+        </div>
+        <div class="tl-body">
+          <h3 class="tl-event-title">Las rosas de <em>abril</em>.</h3>
+          <p class="tl-event-text">Llevaba días planeando esto, incluso antes de nuestra primera cita. Insistí tanto en pedirte tu dirección, quería asegurarme de que estuvieras en casa esa tarde de lunes para reibir tu sorpresa.<br><br>Recuerdo la ansiedad cuando el envío se demoró un poco por factores externos, temiendo que arruinaran la sorpresa. Pero todo valió la pena en el instante exacto en que recibí esa foto tuya: te veías divina, iluminando las rosas con tu sonrisa.</p>
+          <div class="tl-easter-wrap">
+            <button class="tl-easter" onclick="toggleEaster(this)">
+              <span class="tl-easter-arrow">›</span> nota
+            </button>
+            <div class="easter-reveal">
+              Hay detalles que se hacen con el corazón en la mano, sobre todo la primera vez. Yo solo quería darte un motivo real para sonreír ese día.
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="tl-item">
+      <div class="tl-dot"></div>
+      <p class="tl-date">the first kiss...</p>
+      <div class="tl-card">
+        <div class="tl-photo">
+          <img 
+  src="assets/tlay.jpg" 
+  alt="Los lirios de la primera cita"
+  style="width:100%; height:100%; object-fit:cover; object-position: center 60%;"
+/>
+        </div>
+        <div class="tl-body">
+          <h3 class="tl-event-title">El punto de no <em>retorno</em></h3>
+          <p class="tl-event-text">Segunda cita. Elegí ese restaurante oaxaqueño; lo busqué minuciosamente desde el segundo exacto en que me dijiste que sí saldríamos. Quería que todo fuera perfecto, aunque al final, la perfección no estaba en el menú, sino frente a mí.<br><br>Tú pediste tlayuda, yo enfrijoladas. Entre bocado y bocado, el mundo de afuera se sentía cada vez más lejano y nosotros más cerca. Me perdí mil veces en tu risa mientras compartíamos platos y confesiones.<br><br>Y entonces, llegó el final de la comida. Justo antes de despedirnos, sucedió. Sin planes, sin guiones, simplemente pasó. Fue el instante en que el universo dejó de girar para dejarnos a solas.</p>
+          <div class="tl-easter-wrap">
+            <button class="tl-easter" onclick="toggleEaster(this)">
+              <span class="tl-easter-arrow">›</span> nota
+            </button>
+            <div class="easter-reveal">
+              Ese momento se sintió como cuando escuchas tu canción favorita. No quieres que termine, pero sabes que es inevitable. Solo quieres quedarte ahí, en ese instante exacto, para siempre.
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="the-click">
+  <div class="click-bg"></div>
+  <div class="click-number" aria-hidden="true">01</div>
+  <div class="click-inner">
+    <h2 class="click-title">Donde todo <em>todo encajó</em></h2>
+    <div class="click-divider"></div>
+    <p class="click-text">
+      No fue un estruendo ni una escena de película. Fue algo mucho más irreversible: la tranquilidad de entender que ya no tenía sentido buscar en otra parte. 
+      <br><br>
+      Dejé de verte como una casualidad para verte como mi lugar seguro. Pensar en ti dejó de ser un ruido de fondo para convertirse, por fin, en mi frecuencia favorita. Fue el momento en que entendí que no solo quería coincidir contigo, sino quedarme.
+    </p>
+    <div class="click-divider"></div>
+    <p class="click-aside">// ese instante exacto donde el ruido del mundo se apagó y solo quedaste tú.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-glyph">♡</span>
+    <p class="footer-message">
+      «No tengo el mapa completo de lo que viene.<br>
+      Tengo la certeza de que quiero seguir descubriendolo contigo.»<br>
+      <span style="font-size:.85rem; opacity:.6">— y que suerte la mía que existes.</span>
+    </p>
+    <button class="footer-btn" onclick="handleCTA()">
+      <span>→ Dónde el tiempo se detiene...</span>
+    </button>
+    <p class="footer-meta">// hecho con corazón por y para ti · v17.04.26</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
